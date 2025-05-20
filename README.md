@@ -1,7 +1,9 @@
 # -RockPaperScissors
  Rock, Paper, Scissors with Computer Vision A Python project that uses the webcam to recognize rock, paper, and scissors hand gestures in real time using OpenCV. The player competes against the computer, which makes a random move and displays the round result.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aiB8lnUhGfI?si=4E37yUUrp8dP3mN-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<video src="/2025-05-16%2020-28-48.mp4" controls width="560">
+    Seu navegador não suporta a tag de vídeo.
+</video>
 
 ## How it works
 
