@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState, useRef } from 'react';
 
-const AnimatedCounter = ({ end, duration = 2000 }: { end: number, duration?: number }) => {
+const AnimatedCounter = ({ end, duration = 2500 }: { end: number, duration?: number }) => {
   const [count, setCount] = useState(0);
   const elementRef = useRef<HTMLSpanElement>(null);
   const [hasStarted, setHasStarted] = useState(false);
@@ -21,14 +21,23 @@ const AnimatedCounter = ({ end, duration = 2000 }: { end: number, duration?: num
     if (!hasStarted) return;
     let startTime: number | null = null;
     let frameId: number;
+
     const step = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
-      const ease = 1 - Math.pow(1 - progress, 3);
+
+      const ease = 1 - Math.pow(1 - progress, 2);
+      
       setCount(Math.floor(ease * end));
-      if (progress < 1) frameId = window.requestAnimationFrame(step);
-      else setCount(end);
+
+      if (progress < 1) {
+        frameId = window.requestAnimationFrame(step);
+      } else {
+        // Garante que termina exatamente no número final
+        setCount(end);
+      }
     };
+
     frameId = window.requestAnimationFrame(step);
     return () => cancelAnimationFrame(frameId);
   }, [hasStarted, end, duration]);
@@ -38,12 +47,11 @@ const AnimatedCounter = ({ end, duration = 2000 }: { end: number, duration?: num
 
 const Stats = () => {
   return (
-    // VOLTOU PARA O BRANCO (Clean)
     <section className="py-24 bg-white border-b border-gray-100 relative">
       <div className="container mx-auto px-6 text-center">
         
         <h3 className="text-2xl md:text-3xl font-black text-projettar-black uppercase mb-16 tracking-[0.2em]">
-            Há mais de 3 anos no mercado
+            Nossos números
             <span className="block w-24 h-1 bg-projettar-red mx-auto mt-6"></span>
         </h3>
 
@@ -51,9 +59,9 @@ const Stats = () => {
             {/* ITEM 1 */}
             <div className="flex-1 px-4 group cursor-default">
                 <div className="flex justify-center items-baseline text-6xl md:text-7xl font-black text-projettar-red mb-2 tracking-tighter">
-                    <span>+</span><AnimatedCounter end={500} />
+                    <span>+</span><AnimatedCounter end={3} duration={2000} />
                 </div>
-                <span className="text-projettar-black font-bold text-sm md:text-base uppercase tracking-widest">Letreiros Instalados</span>
+                <span className="text-projettar-black font-bold text-sm md:text-base uppercase tracking-widest">anos de mercado</span>
             </div>
             
             <div className="hidden md:block w-px h-24 bg-gray-200 mx-8"></div>
@@ -61,7 +69,7 @@ const Stats = () => {
             {/* ITEM 2 */}
             <div className="flex-1 px-4 group cursor-default">
                 <div className="flex justify-center items-baseline text-6xl md:text-7xl font-black text-projettar-red mb-2 tracking-tighter">
-                    <span>+</span><AnimatedCounter end={300} />
+                    <span>+</span><AnimatedCounter end={100} />
                 </div>
                 <span className="text-projettar-black font-bold text-sm md:text-base uppercase tracking-widest">Clientes Atendidos</span>
             </div>
@@ -71,7 +79,7 @@ const Stats = () => {
             {/* ITEM 3 */}
             <div className="flex-1 px-4 group cursor-default">
                 <div className="flex justify-center items-baseline text-6xl md:text-7xl font-black text-projettar-red mb-2 tracking-tighter">
-                    <span>+</span><AnimatedCounter end={50} />
+                    <span>+</span><AnimatedCounter end={30} />
                 </div>
                 <span className="text-projettar-black font-bold text-sm md:text-base uppercase tracking-widest">Em nosso time</span>
             </div>

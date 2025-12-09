@@ -3,9 +3,7 @@ import { Target, Eye, Diamond, CheckCircle2 } from 'lucide-react';
 
 const WhyUs = () => {
   return (
-    // MUDANÇA: bg-projettar-light (Cinza)
     <section id="sobre" className="py-28 bg-projettar-light relative overflow-hidden border-b border-gray-200">
-      {/* ... (O conteúdo interno permanece IDÊNTICO, só mudamos a linha acima) ... */}
       <div className="absolute inset-0 bg-tech-grid opacity-30 pointer-events-none"></div>
       
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
@@ -19,7 +17,7 @@ const WhyUs = () => {
                 <h2 className="text-4xl md:text-5xl font-extrabold text-projettar-black mb-6">
                     Engenharia e Criatividade <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-projettar-red to-projettar-darkRed">
-                        Unidas pelo Excelência.
+                        Unidas pela Excelência.
                     </span>
                 </h2>
                 <p className="text-lg text-projettar-grey max-w-3xl mx-auto leading-relaxed">
@@ -69,7 +67,19 @@ const WhyUs = () => {
                         </li>
                         <li className="flex items-start gap-2">
                             <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0 text-white/80" />
-                            <span>Compromisso absoluto com prazos.</span>
+                            <span>Design alinhado à engenharia.</span>
+                        </li>
+                                                <li className="flex items-start gap-2">
+                            <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0 text-white/80" />
+                            <span>Compromisso com prazos e qualidade do grupo.</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0 text-white/80" />
+                            <span>Inovação em métodos, materiais e processos.</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0 text-white/80" />
+                            <span>Atendimento consultivo e foco total no cliente.</span>
                         </li>
                     </ul>
                 </div>
@@ -108,7 +118,7 @@ const WhyUs = () => {
                     <div className="flex gap-6 group">
                         <span className="text-5xl font-black text-projettar-red/10 group-hover:text-projettar-red/20 transition-colors">02.</span>
                         <div>
-                            <h4 className="text-xl font-bold text-projettar-black mb-2">Qualidade Absurda com Rapidez</h4>
+                            <h4 className="text-xl font-bold text-projettar-black mb-2">Compromisso com a entrega de qualidade</h4>
                             <p className="text-projettar-grey leading-relaxed">
                                 Metodologia industrial otimizada para entregar a beleza que sua marca exige, sem atrasar os prazos.
                             </p>

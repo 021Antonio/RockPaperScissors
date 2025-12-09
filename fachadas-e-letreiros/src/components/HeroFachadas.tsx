@@ -19,7 +19,8 @@ const HeroFachadas = () => {
             
             <div className="border-l-[6px] border-projettar-red pl-6 py-2">
                 <p className="text-xl text-projettar-grey font-medium leading-relaxed max-w-xl">
-                <strong>Projetamos a sua marca contra a invisibilidade e o amadorismo:</strong> Implemente agora uma fachada que atrai, impressiona e dura, transformando quem passa em quem compra.
+                <strong>Projetamos a sua marca contra a invisibilidade e o amadorismo:</strong> Implemente uma fachada que atrai,
+impressiona e dura, transformando quem passa em quem compra.
                 </p>
             </div>
 

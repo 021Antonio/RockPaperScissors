@@ -10,7 +10,6 @@ const CallToAction = () => {
 
       <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
         
-        {/* Copy solicitada no PDF */}
         <h2 className="text-2xl md:text-4xl font-extrabold mb-10 leading-snug max-w-4xl mx-auto drop-shadow-sm">
           "Você investe milhões na excelência interna da sua empresa, mas o que o cliente vê primeiro? <br/>
           <span className="text-white bg-white/20 px-2 rounded">A fachada.</span>"
@@ -23,7 +22,6 @@ const CallToAction = () => {
         >
           Fale com um especialista
         </a>
-
       </div>
     </section>
   );

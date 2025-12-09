@@ -2,13 +2,13 @@ import React from 'react';
 
 const Clientes = () => {
   const logos = [
-    { name: "Petrobras", src: "/img/clientes/petrobras.png", height: "h-16 md:h-20" },
+    { name: "Petrobras", src: "/img/clientes/petrobras.png", height: "h-20 md:h-20" },
     { name: "Vó Alzira", src: "/img/clientes/voalzira.png", height: "h-12 md:h-16" },
-    { name: "Smartfit", src: "/img/clientes/smartfit.png", height: "h-16 md:h-20" },
+    { name: "Smartfit", src: "/img/clientes/smartfit.png", height: "h-20 md:h-20" },
   ];
 
   return (
-    // MUDANÇA: bg-white
+
     <section id="clientes" className="py-20 bg-white border-t border-gray-100">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="text-center">
